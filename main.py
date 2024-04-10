@@ -21,20 +21,19 @@ def main():
               "1. Encode"
               "2. Decode"
               "3. Quit")
-        menu_input = int(input("Please enter an option: ")
+        menu_input = int(input("Please enter an option: "))
         if menu_input == 1:
             password = input("Please enter your password to encode: ")
             encoded_password = encode(password)
             print("Your password has been encoded and stored!")
-		elif menu_input == 2:
-			decoded_password = decode_password(encoded_password)
-			print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+        elif menu_input == 2:
+            decoded_password = decode_password(encoded_password)
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+        elif menu_input == 3:
+            break
+        else:
+            print("Invalid input")
 
-		elif menu_input == 3:
-			break
-		else:
-			print("Invalid input")
-          
+    if __name__ == "__main__":
+        main()
 
-if __name__ == "__main__""
-    main()
