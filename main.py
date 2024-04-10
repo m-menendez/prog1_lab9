@@ -16,24 +16,25 @@ def decode_password(encoded_password):
 
 def main():
     while True:
-        print("Menu"
-              "-------------"
-              "1. Encode"
-              "2. Decode"
-              "3. Quit")
+        print("Menu\n"
+              "-------------\n"
+              "1. Encode\n"
+              "2. Decode\n"
+              "3. Quit\n")
         menu_input = int(input("Please enter an option: "))
         if menu_input == 1:
             password = input("Please enter your password to encode: ")
             encoded_password = encode(password)
-            print("Your password has been encoded and stored!")
+            print("Your password has been encoded and stored!\n")
         elif menu_input == 2:
             decoded_password = decode_password(encoded_password)
-            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.\n")
         elif menu_input == 3:
             break
         else:
             print("Invalid input")
 
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
 
